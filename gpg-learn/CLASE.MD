@@ -1,35 +1,32 @@
 # GPG
 
+**Tabla de contenidos**
+
 <!-- vscode-markdown-toc -->
 
-## Tabla de contenidos
-
-[Teoría](#Teora)
-
--   [¿Qué significa GPG y cuál es su función principal?](#QusignificaGPGyculessufuncinprincipal)
--   [¿Cuál es la diferencia entre criptografía simétrica y asimétrica? ¿Qué tipo de criptografía utiliza GPG?](#CulesladiferenciaentrecriptografasimtricayasimtricaQutipodecriptografautilizaGPG)
--   [¿Cuál es el propósito de tener un par de claves en GPG? ¿Cómo se genera un par de claves?](#CuleselpropsitodetenerunpardeclavesenGPGCmosegeneraunpardeclaves)
--   [¿Cómo se importan y exportan claves en GPG? Proporciona los comandos básicos para realizar estas operaciones.](#CmoseimportanyexportanclavesenGPGProporcionaloscomandosbsicospararealizarestasoperaciones.)
--   [¿Cómo se el nombre de usuario?](#Cmoseelnombredeusuario)
--   [¿Qué comandos se utilizan en GPG para cifrar y descifrar mensajes?](#QucomandosseutilizanenGPGparacifrarydescifrarmensajes)
--   [¿Qué clave privada usa **`gpg --decrypt`**? ¿Cómo se el identificador del destinatario?](#Quclaveprivadausagpg--decryptCmoseelidentificadordeldestinatario)
--   [¿Cuál es la diferencia entre firmar y cifrar un mensaje en GPG?](#CulesladiferenciaentrefirmarycifrarunmensajeenGPG)
--   [¿Cómo se firma y verifica un mensaje con GPG?](#CmosefirmayverificaunmensajeconGPG)
--   [¿Qué son las subclaves en GPG y cuál es su propósito?](#QusonlassubclavesenGPGyculessupropsito)
--   [¿Todos los algoritmos pueden generar subclaves a partir de la principal?](#Todoslosalgoritmospuedengenerarsubclavesapartirdelaprincipal)
--   [¿Cuál es el método por el cual se generan subclaves a partir de la principal?](#Culeselmtodoporelcualsegeneransubclavesapartirdelaprincipal)
--   [¿Se puede desencriptar con la clave principal un archivo encriptado con una subclave? ¿Cómo es que la subclave conserva esta capacidad?](#SepuededesencriptarconlaclaveprincipalunarchivoencriptadoconunasubclaveCmoesquelasubclaveconservaestacapacidad)
--   [¿Cómo se revoca una clave en GPG? ¿Por qué es importante hacerlo correctamente?](#CmoserevocaunaclaveenGPGPorquesimportantehacerlocorrectamente)
-
-[Ejercicios](#Ejercicios)
-
--   [Generación de claves](#Generacindeclaves)
--   [Exportación e importación de claves](#Exportacineimportacindeclaves)
--   [Cifrado y descifrado de mensajes](#Cifradoydescifradodemensajes)
--   [Firma y verificación de mensajes](#Firmayverificacindemensajes)
+-   [Teoría](#Teora)
+    -   [¿Qué significa GPG y cuál es su función principal?](#QusignificaGPGyculessufuncinprincipal)
+    -   [¿Cuál es la diferencia entre criptografía simétrica y asimétrica? ¿Qué tipo de criptografía utiliza GPG?](#CulesladiferenciaentrecriptografasimtricayasimtricaQutipodecriptografautilizaGPG)
+    -   [¿Cuál es el propósito de tener un par de claves en GPG? ¿Cómo se genera un par de claves?](#CuleselpropsitodetenerunpardeclavesenGPGCmosegeneraunpardeclaves)
+    -   [¿Cómo se importan y exportan claves en GPG? Proporciona los comandos básicos para realizar estas operaciones.](#CmoseimportanyexportanclavesenGPGProporcionaloscomandosbsicospararealizarestasoperaciones.)
+    -   [¿Cómo se el nombre de usuario?](#Cmoseelnombredeusuario)
+    -   [¿Qué comandos se utilizan en GPG para cifrar y descifrar mensajes?](#QucomandosseutilizanenGPGparacifrarydescifrarmensajes)
+    -   [¿Qué clave privada usa **`gpg --decrypt`**? ¿Cómo se el identificador del destinatario?](#Quclaveprivadausagpg--decryptCmoseelidentificadordeldestinatario)
+    -   [¿Cuál es la diferencia entre firmar y cifrar un mensaje en GPG?](#CulesladiferenciaentrefirmarycifrarunmensajeenGPG)
+    -   [¿Cómo se firma y verifica un mensaje con GPG?](#CmosefirmayverificaunmensajeconGPG)
+    -   [¿Qué son las subclaves en GPG y cuál es su propósito?](#QusonlassubclavesenGPGyculessupropsito)
+    -   [¿Todos los algoritmos pueden generar subclaves a partir de la principal?](#Todoslosalgoritmospuedengenerarsubclavesapartirdelaprincipal)
+    -   [¿Cuál es el método por el cual se generan subclaves a partir de la principal?](#Culeselmtodoporelcualsegeneransubclavesapartirdelaprincipal)
+    -   [¿Se puede desencriptar con la clave principal un archivo encriptado con una subclave? ¿Cómo es que la subclave conserva esta capacidad?](#SepuededesencriptarconlaclaveprincipalunarchivoencriptadoconunasubclaveCmoesquelasubclaveconservaestacapacidad)
+    -   [¿Cómo se revoca una clave en GPG? ¿Por qué es importante hacerlo correctamente?](#CmoserevocaunaclaveenGPGPorquesimportantehacerlocorrectamente)
+-   [Ejercicios](#Ejercicios)
+    -   [Generación de claves](#Generacindeclaves)
+    -   [Exportación e importación de claves](#Exportacineimportacindeclaves)
+    -   [Cifrado y descifrado de mensajes](#Cifradoydescifradodemensajes)
+    -   [Firma y verificación de mensajes](#Firmayverificacindemensajes)
 
 <!-- vscode-markdown-toc-config
-	numbering=true
+	numbering=false
 	autoSave=true
 	/vscode-markdown-toc-config -->
 <!-- /vscode-markdown-toc -->
