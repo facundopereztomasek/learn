@@ -72,7 +72,8 @@ Es importante revocar una clave correctamente porque permite informar a otros us
 
 # Ejercicios
 
-**Generación de claves:**
+## Generación de claves
+
 Para generar un par de claves (pública y privada) en GPG, se utiliza el comando `gpg --gen-key` y se siguen las instrucciones para proporcionar la información del usuario durante el proceso de generación.
 
 **Paso 1: Generación del par de claves**
@@ -106,7 +107,8 @@ Your selection?
 **Nota:** Los pasos pueden variar ligeramente dependiendo de tu sistema operativo y de la versión de GPG que estés utilizando. Es importante seguir las instrucciones que se muestran en la terminal.
 Una vez completado este proceso, el par de claves (pública y privada) estará generado y listo para su uso.
 
-**Exportación e importación de claves:**
+## Exportación e importación de claves
+
 La clave pública se exporta utilizando el comando `gpg --export -a "Tu Nombre" > clave_publica.asc`. Para importar una clave pública de otro usuario, se utiliza el comando `gpg --import clave_publica.asc`.
 
 **Paso 1: Exportación de la clave pública**
@@ -139,7 +141,8 @@ $ gpg --import clave_publica.asc
 
 Una vez completados estos pasos, la clave pública estará disponible en tu llavero GPG y podrás utilizarla para cifrar mensajes destinados al propietario de esa clave pública.
 
-**Cifrado y descifrado de mensajes:**
+## Cifrado y descifrado de mensajes
+
 Se cifra un mensaje con el comando `gpg --encrypt -r "Nombre del destinatario" mensaje.txt`. Para descifrar un mensaje cifrado, se utiliza el comando `gpg --decrypt mensaje_cifrado.gpg`.
 
 **Paso 1: Cifrado de un mensaje**
@@ -173,7 +176,8 @@ $ gpg --decrypt mensaje_cifrado.gpg
 
 Una vez completados estos pasos, habrás cifrado y descifrado un mensaje utilizando GPG.
 
-**Firma y verificación de mensajes:**
+## Firma y verificación de mensajes
+
 Para firmar un mensaje, se utiliza el comando `gpg --sign mensaje.txt`. La firma de un mensaje firmado por otro usuario se verifica utilizando el comando `gpg --verify mensaje_firmado.txt`.
 
 **Paso 1: Firma de un mensaje**
