@@ -53,7 +53,17 @@ Para firmar un mensaje con GPG, la persona que envía el mensaje utiliza su clav
 
 Las subclaves en GPG son claves secundarias generadas a partir de la clave principal. Su propósito principal es proporcionar una capa adicional de seguridad y flexibilidad al permitir la delegación de ciertas funciones, como la capacidad de firmar o cifrar, sin exponer la clave principal. Esto significa que si una subclave se ve comprometida, la clave principal aún permanece segura y se puede revocar la subclave comprometida sin afectar la seguridad de la clave principal. Las subclaves también permiten gestionar de manera más eficiente las funciones y los permisos asociados a una clave principal.
 
-¿Todos los algoritmos pueden generar subclaves a partir de la principal? ¿Cuál es el método por el cual se generan subclaves a partir de la principal? ¿Se puede desencriptar con la clave principal un archivo encriptado con una subclave? ¿De ser así, cómo es que la subclave conserva esta capacidad?
+## ¿Todos los algoritmos pueden generar subclaves a partir de la principal?
+
+No todos los algoritmos de clave pública admiten la generación de subclaves. Los algoritmos que actualmente admiten subclaves en GPG son RSA y ElGamal.
+
+## ¿Cuál es el método por el cual se generan subclaves a partir de la principal?
+
+El método utilizado para generar subclaves a partir de la clave principal implica el uso de la clave principal como base para generar nuevas claves secundarias. Esto implica que las subclaves heredan ciertas propiedades de la clave principal, como su identificador único y su relación jerárquica con la clave principal.
+
+## ¿Se puede desencriptar con la clave principal un archivo encriptado con una subclave? ¿Cómo es que la subclave conserva esta capacidad?
+
+Sí, se puede desencriptar un archivo encriptado con una subclave utilizando la clave principal. Esto se debe a que la clave principal posee la capacidad de descifrar cualquier archivo que haya sido cifrado con sus subclaves. La subclave conserva esta capacidad porque, aunque delega ciertas funciones, sigue siendo una derivación de la clave principal y, por lo tanto, puede ser utilizada para descifrar archivos encriptados con ella.
 
 ## ¿Cómo se revoca una clave en GPG? ¿Por qué es importante hacerlo correctamente?
 
