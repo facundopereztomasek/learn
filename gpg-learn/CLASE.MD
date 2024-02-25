@@ -2,7 +2,7 @@
 
 **Tabla de contenidos**
 
-<!-- TOC depthFrom:2 -->
+<!-- TOC depthFrom:2 anchorMode:github.com -->
 
 -   [Teoría](#teoría)
     -   [¿Qué significa GPG y cuál es su función principal?](#¿qué-significa-gpg-y-cuál-es-su-función-principal)
