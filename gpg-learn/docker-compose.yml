@@ -1,0 +1,16 @@
+version: "3"
+services:
+    gpg-container-a:
+        build: .
+        container_name: gpg-container-a
+        tty: true
+        stdin_open: true
+        volumes:
+            - ./practicas_gpg:/practicas_gpg
+    gpg-container-b:
+        build: .
+        container_name: gpg-container-b
+        tty: true
+        stdin_open: true
+        volumes:
+            - ./practicas_gpg:/practicas_gpg
