@@ -2,6 +2,8 @@
 
 <!-- vscode-markdown-toc -->
 
+## Tabla de contenidos
+
 [Teoría](#Teora)
 
 -   [¿Qué significa GPG y cuál es su función principal?](#QusignificaGPGyculessufuncinprincipal)
